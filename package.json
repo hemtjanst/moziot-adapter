@@ -1,0 +1,54 @@
+{
+  "name": "hemtjanst-adapter",
+  "description": "Integrates with Hemtjänst devices over MQTT",
+  "version": "0.0.1",
+  "author": {
+    "name": "bonan",
+    "email": "npm@bonan.se"
+  },
+  "bugs": {
+    "url": "https://github.com/hemtjanst/moziot-adapter/issues"
+  },
+  "contributors": [
+    {
+      "name": "bonan",
+      "email": "npm@bonan.se"
+    }
+  ],
+  "dependencies": {
+    "hemtjanst": "0.0.5",
+    "mqtt": "^2.15.2"
+  },
+  "homepage": "https://github.com/hemtjanst/moziot-adapter",
+  "keywords": [
+    "mqtt",
+    "hemtjanst",
+    "iot",
+    "mozilla"
+  ],
+  "license": "MPL-2.0",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hemtjanst/moziot-adapter"
+  },
+  "main": "index.js",
+  "files": [
+    "LICENSE",
+    "SHA256SUMS",
+    "hemtjanst-adapter.js",
+    "index.js"
+  ],
+  "moziot": {
+    "api": {
+      "min": 1,
+      "max": 1
+    },
+    "plugin": true,
+    "exec": "{nodeLoader} {path}",
+    "config": {
+      "mqtt": "tcp://localhost:1883",
+      "mqttOpts": {}
+    }
+  }
+}
